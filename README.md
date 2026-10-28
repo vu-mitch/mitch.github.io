@@ -1,39 +1,23 @@
-# Chirpy Starter
+# Michael Vu
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+Statische Website für GitHub Pages. Das Layout stammt aus dem Nachbau von [affaanmustafa.com](https://affaanmustafa.com/): schmale Spalte, Newsreader-Überschriften, Manrope-Fließtext, Hell- und Dunkelmodus. Das frühere Chirpy-Jekyll-Theme ist entfernt.
 
-A minimal, ready-to-use template for creating a blog with the [**Chirpy**][chirpy] Jekyll theme. Get up and running in minutes with all critical files pre-configured.
+Die Kopfzeile und die Seiten Work, Writing & Media, About und Contact sind entfernt. Die Startseite zeigt diese Inhalte weiter direkt an. Zusätzlich gibt es `/research/` und `/talks/ai-engineer-nyc-compute-trading/`.
 
-## Why This Starter Exists
+Lokal auf dem eigenen Rechner starten, im Projektordner:
 
-When installing Chirpy through [RubyGems.org][gem], Jekyll can only read a subset of theme files (`_data`, `_layouts`, `_includes`, `_sass`, `assets`) and limited `_config.yml` options from the gem. As a result, users cannot enjoy the full out-of-the-box experience that Chirpy offers.
-
-To unlock all features, the following files must be present in your Jekyll site:
-
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+```bash
+npm start
 ```
 
-This starter bundles those files from the latest **Chirpy** release along with a [CD][CD] workflow, so you can start writing immediately.
+Danach im Browser `http://127.0.0.1:8765/` öffnen. `npm start` braucht kein `npm install`. Node.js reicht.
 
-## Usage
+Ohne Node.js:
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+```bash
+python3 -m http.server 8765
+```
 
-## Contributing
+Unter Windows, falls `python3` fehlt: `py -m http.server 8765`.
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
-
-## License
-
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+Die Datei `index.html` nicht direkt per Doppelklick öffnen. CSS, Skripte und Bilder werden vom Site-Root geladen und funktionieren nur über diesen Server.
