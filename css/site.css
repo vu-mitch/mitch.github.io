@@ -196,6 +196,16 @@ body.page-home .work-clip video {
   border: 1px solid #d9d7d1;
 }
 
+body.page-home .work-clip img {
+  display: block;
+  width: 12.5rem;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 0.4rem;
+  border: 1px solid #d9d7d1;
+}
+
 body.page-home .frame-footer {
   margin-top: auto;
   padding-top: 4.5rem;
@@ -237,7 +247,8 @@ body.page-home .frame-footer p {
   }
 
   body.page-home .work-clip,
-  body.page-home .work-clip video {
+  body.page-home .work-clip video,
+  body.page-home .work-clip img {
     width: 12.5rem;
     height: auto;
   }
